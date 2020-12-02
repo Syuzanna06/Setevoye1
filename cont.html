@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>MILO.DETI</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <style> 
+            input {width: 150px; height: 20px; color: #8B795E; font-family:sans-serif; font-size: 14px}
+            .name {text-transform: capitalize;}
+            input.email:focus {
+            background-color: burlywood; color: #930; }
+</style>
+    </head>
+    <body class="fon">
+        <header>
+            <h1> <img src='logo.jpg' wight="150px"height='150px' align='middle' class='logo'/><font class='nazv'>MILO.DETI</font></h1>
+            
+        </header>
+        <h1><font class='menu'> Меню</font> </h1>
+        <hr>
+        <a href="index.html"><font class='almenu'> Главная </font></a> <br>
+        <a href="catalog.html"><font class='almenu'> Каталог</font></a><br>
+        <a href="cont.html"><font class='almenu'> Контакты </font> </a><br>
+        <hr>
+        <h1 class='menu'>Контакты</h1>
+    
+        <form action="registration.php">
+    <p><label for="name">Имя</label>
+    <input type="text" class="name" ></p>
+    <p><label for="pass">Пароль</label>
+    <input type="password" id="pass"></p>
+    <p><label for="email">E-mail</label>
+            <input type="email" class="email"></p>
+    <p><label for="pol">Пол</label>
+    <select name="pol" id="pol">
+        <option value="">Указать</option>
+        <option value="1">Мужской</option>
+        <option value="2">Женский</option>
+    </select>
+    </p>
+    <p><input type="submit" value="Регистрация"></p>
+</form>
+        <hr>
+        <h1>Адрес</h1>
+        <p>Телефон: <a href="tel:+79538746387">+7(953)874-63-87</a></p>
+        <p>Эл.почта: <a href="mailto:genipx@mail.ru">genipx@mail.ru</a></p>
+        <p>Адрес: г.Тула, ул.Смидович, 14</p>
+        <div id="map" style="width:400px;height:400px"></div>
+            <script>function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(54.164996, 37.582652),
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}</script>
+            <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+        <footer>
+        <p>&copy Все права защищены</p>
+    </footer>
+    </body>
+</html>
